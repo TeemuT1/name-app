@@ -11,7 +11,7 @@
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
-    "heroku-prebuild": "npm install --dev"
+    "heroku-postbuild": "webpack --mode production"
   },
   "author": "Teemu Typpi",
   "license": "ISC",
