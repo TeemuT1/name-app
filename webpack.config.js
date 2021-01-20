@@ -1,10 +1,10 @@
 const path = require('path')
-const HtmlWebpackPlugin = require("html-webpack-plugin")
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: ["@babel/polyfill", "./src/index.js"],
     output: {
-      path: path.resolve(__dirname, 'build'),
+      path: path.resolve(__dirname, 'dist'),
       filename: 'main.js',
       publicPath: '/'
     },
@@ -30,14 +30,15 @@ module.exports = {
       extensions: ["*", ".js", ".jsx"],
     },
     devServer: {
-      contentBase: path.resolve(__dirname, 'build'),
+      contentBase: path.resolve(__dirname, 'dist'),
       compress: true,
       historyApiFallback: true,
       port: 3000,
     },
     devtool: 'source-map',
     plugins: [new HtmlWebpackPlugin({
-        template: "build/index.html",
+        template: './public/index.html',
+        filename: './index.html'
       }),
     ],
   }
