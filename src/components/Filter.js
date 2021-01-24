@@ -2,8 +2,7 @@ import React from 'react'
 import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
 
-const Filter = (props) => {
-  const { nameFilter, handleNameFilterChange, toggleExactFilter } = props
+const Filter = ({ nameFilter, handleNameFilterChange, toggleExactFilter }) => {
 
   const searchStyle = {
     paddingTop: 10,
@@ -27,9 +26,11 @@ const Filter = (props) => {
           value = { nameFilter }
           onChange = { handleNameFilterChange }
         />
+
         <InputGroup.Append>
           <InputGroup.Text>Exact match</InputGroup.Text>
         </InputGroup.Append>
+
         <InputGroup.Append>
           <InputGroup.Checkbox id='filter-exact-match-checkbox'
             aria-label="Checkbox for toggling exact match for name search"

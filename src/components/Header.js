@@ -7,7 +7,7 @@ const Header = () => {
   }
 
   return (
-    <div style={ headerStyle }>
+    <div style={headerStyle}>
       <h1>Name Application</h1>
     </div>
   )

@@ -50,7 +50,7 @@ const NameTable = ({ names, nameFilter, exactFilter }) => {
         </thead>
         <tbody>
           {sortedNames.map(name =>
-            <Name key={ name.name } name={ name } nameFilter={ nameFilter }/>) }
+            <Name key={name.name} name={name} nameFilter={nameFilter}/>)}
         </tbody>
         <tfoot>
           <tr>

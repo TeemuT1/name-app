@@ -36,8 +36,6 @@ const App = () => {
     setExactFilter(!exactFilter)
   }
 
-
-
   if (names.length === 0) {
     return <div className='container'>no names found</div>
   }

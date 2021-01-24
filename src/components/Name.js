@@ -1,8 +1,6 @@
 import React from 'react'
 
-const Name = (props) => {
-  const { name } = props
-
+const Name = ({ name }) => {
   return(
     <tr key={name.name}>
       <td>{name.name}</td>

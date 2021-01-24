@@ -15,7 +15,12 @@ namesRouter.get('/getTotal', (request, response, next) => {
 namesRouter.get('/:name', (request, response, next) => {
   const nameToFind = request.params.name.toLowerCase()
   const foundName = names.find(name => name.name.toLowerCase() === nameToFind)
-  return response.json(foundName)
+  if(foundName) {
+    return response.json(foundName)
+  }
+  else {
+    return response.status(404).send('error, name not found in data')
+  }
 })
 
 module.exports = namesRouter
