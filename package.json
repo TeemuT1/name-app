@@ -14,7 +14,8 @@
     "build": "webpack --mode production",
     "eslint": "eslint .",
     "server:test": "cross-env NODE_ENV=test node app.js",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "test:e2e": "cypress run"
   },
   "author": "Teemu Typpi",
   "license": "ISC",
