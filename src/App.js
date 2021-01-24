@@ -49,7 +49,7 @@ const App = () => {
       <Filter nameFilter={nameFilter}
         handleNameFilterChange={handleNameFilterChange}
         toggleExactFilter={toggleExactFilter}/>
-      <NameTable names={names} nameFilter={nameFilter} exactfilter={exactFilter}/>
+      <NameTable names={names} nameFilter={nameFilter} exactFilter={exactFilter}/>
     </div>
 
   )

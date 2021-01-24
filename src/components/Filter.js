@@ -10,9 +10,10 @@ const Filter = (props) => {
     paddingLeft: 10,
     paddingRight: 10,
     border: 'solid',
-    borderWidth: 5,
+    borderWidth: 3,
     marginBottom: 5,
-    borderColor: '#00C0FF'
+    borderColor: '#00C0FF',
+    textAlign: 'center',
   }
 
   return(
@@ -22,8 +23,7 @@ const Filter = (props) => {
 
         <FormControl id='filter-input-field'
           placeholder="Search for a name"
-          aria-label="Search"
-          aria-describedby="basic-addon1"
+          aria-label="Text input field for searching names"
           value = { nameFilter }
           onChange = { handleNameFilterChange }
         />
@@ -32,11 +32,10 @@ const Filter = (props) => {
         </InputGroup.Append>
         <InputGroup.Append>
           <InputGroup.Checkbox id='filter-exact-match-checkbox'
-            aria-label="Checkbox for toggling exact match"
+            aria-label="Checkbox for toggling exact match for name search"
             onChange = { toggleExactFilter }
           />
         </InputGroup.Append>
-
 
       </InputGroup>
     </div>

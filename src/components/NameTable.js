@@ -6,6 +6,10 @@ import Button from 'react-bootstrap/Button'
 
 const NameTable = ({ names, nameFilter, exactFilter }) => {
 
+  const nameTableStyle = {
+    textAlign: 'center',
+  }
+
   if (names.length === 0) {
     return null
   }
@@ -28,31 +32,33 @@ const NameTable = ({ names, nameFilter, exactFilter }) => {
   }
 
   return (
-    <Table bordered hover striped size='sm' id='name-table'>
-      <thead>
-        <tr>
-          <th>
-            <Button id='name-header-button' onClick={ () => requestSortBy('name') }>
+    <div style={nameTableStyle}>
+      <Table bordered hover striped size='sm' id='name-table'>
+        <thead>
+          <tr>
+            <th>
+              <Button id='name-header-button' onClick={ () => requestSortBy('name') }>
             Name
-            </Button>
-          </th>
-          <th>
-            <Button id='amount-header-button' onClick={ () => requestSortBy('amount') }>
+              </Button>
+            </th>
+            <th>
+              <Button id='amount-header-button' onClick={ () => requestSortBy('amount') }>
             Amount
-            </Button>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        {sortedNames.map(name =>
-          <Name key={ name.name } name={ name } nameFilter={ nameFilter }/>) }
-      </tbody>
-      <tfoot>
-        <tr>
-          <td><strong>Total</strong></td><td><strong>{ countTotalNames() }</strong></td>
-        </tr>
-      </tfoot>
-    </Table>
+              </Button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {sortedNames.map(name =>
+            <Name key={ name.name } name={ name } nameFilter={ nameFilter }/>) }
+        </tbody>
+        <tfoot>
+          <tr>
+            <td><strong>Total</strong></td><td><strong>{ countTotalNames() }</strong></td>
+          </tr>
+        </tfoot>
+      </Table>
+    </div>
   )
 
 }

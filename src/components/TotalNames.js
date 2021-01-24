@@ -6,9 +6,10 @@ const TotalNames = ({ totalNames }) => {
     paddingTop: 10,
     paddingLeft: 2,
     border: 'solid',
-    borderWidth: 1,
+    borderWidth: 3,
     marginBottom: 5,
-    borderColor: '#00C0FF'
+    borderColor: '#00C0FF',
+    textAlign: 'center'
   }
 
   return (
