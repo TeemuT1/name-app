@@ -6,12 +6,14 @@ Front end code is under the 'src' folder. Back end server is in the root.
 Initially the names are sorted by popularity. The buttons in the name table header can be used to sort them alphabetically or by amount,
 ascending or descending.
 
-Type in the search field to filter names. Use the tickbox to toggle exact search.
+Type in the search field to filter names. Use the checkbox to toggle exact search.
+
+[The app is deployed on Heroku](https://salty-garden-79955.herokuapp.com/)
 
 ## Main technologies
 Front end is made with **React**. **Axios** is used to fetch data from the back end **Express/Node** server, which currently gets the name data from a local .json file.
 
-Front end is styled with **react-boostrap** and some inline styling.
+Front end is styled with **react-bootstrap** and some inline styling.
 
 End-to-end testing is done with **Cypress**.
 
