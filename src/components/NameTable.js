@@ -4,7 +4,7 @@ import Name from './Name'
 import Table from 'react-bootstrap/Table'
 import Button from 'react-bootstrap/Button'
 
-const NameTable = ({ names, nameFilter, filterExact }) => {
+const NameTable = ({ names, nameFilter, exactFilter }) => {
 
   if (names.length === 0) {
     return null
@@ -12,7 +12,7 @@ const NameTable = ({ names, nameFilter, filterExact }) => {
 
   let filteredNames
 
-  if (filterExact && nameFilter !== '') {
+  if (exactFilter && nameFilter !== '') {
     filteredNames = names.filter(name => name.name.toLowerCase() === nameFilter.toLowerCase())
   }
   else {

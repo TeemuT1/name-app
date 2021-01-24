@@ -3,7 +3,7 @@ import InputGroup from 'react-bootstrap/InputGroup'
 import FormControl from 'react-bootstrap/FormControl'
 
 const Filter = (props) => {
-  const { nameFilter, handleNameFilterChange, toggleFilterExact } = props
+  const { nameFilter, handleNameFilterChange, toggleExactFilter } = props
 
   const searchStyle = {
     paddingTop: 10,
@@ -33,7 +33,7 @@ const Filter = (props) => {
         <InputGroup.Append>
           <InputGroup.Checkbox id='filter-exact-match-checkbox'
             aria-label="Checkbox for toggling exact match"
-            onChange = { toggleFilterExact }
+            onChange = { toggleExactFilter }
           />
         </InputGroup.Append>
 

@@ -10,7 +10,7 @@ const App = () => {
   const [names, setNames] = useState([])
   const [totalNames, setTotalNames] = useState('')
   const [nameFilter, setNameFilter] = useState('')
-  const [filterExact, setFilterExact] = useState(false)
+  const [exactFilter, setExactFilter] = useState(false)
 
   useEffect(() => {
     nameService
@@ -25,8 +25,6 @@ const App = () => {
       .getTotal()
       .then(receivedTotalNames => {
         setTotalNames(receivedTotalNames)
-        console.log('totalnames', receivedTotalNames)
-        console.log('totalNames', totalNames)
       })
   }, [])
 
@@ -34,14 +32,14 @@ const App = () => {
     setNameFilter(event.target.value)
   }
 
-  const toggleFilterExact = (event) => {
-    setFilterExact(!filterExact)
+  const toggleExactFilter = (event) => {
+    setExactFilter(!exactFilter)
   }
 
 
 
   if (names.length === 0) {
-    return <div className='container'>no names</div>
+    return <div className='container'>no names found</div>
   }
 
   return (
@@ -50,8 +48,8 @@ const App = () => {
       <TotalNames totalNames={totalNames}/>
       <Filter nameFilter={nameFilter}
         handleNameFilterChange={handleNameFilterChange}
-        toggleFilterExact={toggleFilterExact}/>
-      <NameTable names={names} nameFilter={nameFilter} filterExact={filterExact}/>
+        toggleExactFilter={toggleExactFilter}/>
+      <NameTable names={names} nameFilter={nameFilter} exactfilter={exactFilter}/>
     </div>
 
   )
