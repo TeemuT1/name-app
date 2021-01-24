@@ -10,8 +10,12 @@
     "dev": "webpack serve --open --mode development",
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon app.js",
     "build": "webpack --mode production",
-    "heroku-postbuild": "webpack --mode production"
+    "heroku-postbuild": "webpack --mode production",
+    "eslint": "eslint .",
+    "server:test": "cross-env NODE_ENV=test node app.js",
+    "cypress:open": "cypress open"
   },
   "author": "Teemu Typpi",
   "license": "ISC",
@@ -20,7 +24,13 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
     "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
     "css-loader": "^5.0.1",
+    "cypress": "^6.3.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.18.0",
+    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-react": "^7.22.0",
     "html-loader": "^1.3.2",
     "html-webpack-plugin": "^4.5.1",
     "style-loader": "^2.0.0",
@@ -33,7 +43,9 @@
     "axios": "^0.21.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "nodemon": "^2.0.7",
     "react": "^17.0.1",
+    "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1"
   },
   "proxy": "http://localhost:5000"

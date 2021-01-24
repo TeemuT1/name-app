@@ -1,0 +1,44 @@
+{
+    "names": [
+      {
+        "name": "Ville",
+        "amount": 1
+      },
+      {
+        "name": "Anna",
+        "amount": 2
+      },
+      {
+        "name": "Antti",
+        "amount": 3
+      },
+      {
+        "name": "Sanna",
+        "amount": 3
+      },
+      {
+        "name": "Mikko",
+        "amount": 4
+      },
+      {
+        "name": "Minna",
+        "amount": 5
+      },
+      {
+        "name": "Timo",
+        "amount": 6
+      },
+      {
+        "name": "Satu",
+        "amount": 7
+      },
+      {
+        "name": "Tuomas",
+        "amount": 8
+      },
+      {
+        "name": "Tiina",
+        "amount": 9
+      }
+    ]
+}
