@@ -1,6 +1,8 @@
 # Name-app
 A name listing app displaying names and their amounts in a .json file.
 
+Front end code is under the 'src' folder. Back end server is in the root.
+
 Initially the names are sorted by popularity. The buttons in the name table header can be used to sort them alphabetically or by amount,
 ascending or descending.
 
@@ -23,11 +25,11 @@ example of returned data:
 [
   {
     "name": "Ville",
-     "amount": 1
+     "amount": 24
   },
   {
      "name": "Anna",
-     "amount": 2
+     "amount": 6
   },
   ...
 ]
@@ -42,7 +44,7 @@ example: `GET /api/names/ville` gets:
 ```
 {
   "name": "Ville",
-  "amount": 1
+  "amount": 24
 }
 
 ```
@@ -80,5 +82,3 @@ run `npm install`
 3. Sorting re-done every time when name filter is changed. Could let Name component to filter itself instead.
 
 4. Unit testing.
-
-5. Add classnames according to some naming convention.
